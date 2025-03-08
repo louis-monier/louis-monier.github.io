@@ -1,138 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Louis Monier</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Louis Monier | AI & Data Science</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Your stylesheet -->
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+    
+    .social-icons a {
+      font-size: 1.2rem;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+      color: #0077b5; /* LinkedIn blue, or choose your preferred hover color */
+    }
+    
+    /* If you keep the contact section, style it as well */
+    .social-icons-container {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 20px;
+    }
+    
+    .social-icons-container a {
+      font-size: 1.5rem;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    
+    .social-icons-container a:hover {
+      color: #0077b5;
+    }
+    
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* Add any other existing navbar styles */
+    }
+    
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-left: 20px;
+    }
+    
+    .social-icons a {
+      font-size: 1.2rem;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+      color: #0077b5;
+    }
+    
+    @media (max-width: 768px) {
+      .social-icons {
+        position: absolute;
+        top: 15px;
+        right: 70px;
+      }
+    }
+    
+    .location {
+      float: right;
+    }
+  </style>
 </head>
-
 <body>
 
-  <!-- Header / Navigation -->
+  <!-- HEADER / NAVIGATION -->
   <header>
-    <div class="logo">
-      <h1>Louis Monier</h1>
-      <p>Mines Paris Engineer • ENS Lyon Normalien • AI & Data Science</p>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>LM</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">01. About</a></li>
+        <li><a href="#experience">02. Experience</a></li>
+        <li><a href="#education">03. Education</a></li>
+        <li><a href="#skills">04. Skills</a></li>
+        <li><a href="#projects">05. Projects</a></li>
+        <li><a href="#publications">06. Publications</a></li>
       </ul>
+      <div class="social-icons">
+        <a href="mailto:monier.louis@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/louis-monier" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/louis-monier" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
+
+    <div class="hero">
+      <div class="hero-text">
+        <p class="hero-intro">Hi, my name is</p>
+        <h2>Louis Monier.</h2>
+        <h3>I build AI-driven solutions.</h3>
+        <p>
+          I'm a data scientist and research engineer specializing in reinforcement learning, 
+          large-scale data infrastructure, and bringing cutting-edge research to production. 
+          Currently leading a data team at Spark.
+        </p>
+        <a class="btn" href=".pdf" target="_blank" rel="noopener">Download CV</a>
+      </div>
+    </div>
   </header>
 
-  <!-- Main Content Area -->
-  <main>
-    <!-- About Section -->
-    <section id="about" class="section">
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section">
+    <div class="section-title">
       <h2>About Me</h2>
-      <p>
-        Hi! I’m Louis, a Data Science & AI professional with a background in
-        engineering from MINES ParisTech and ENS Lyon. I enjoy building and leading
-        data teams, designing machine learning systems, and exploring cutting-edge
-        research topics in AI.
-      </p>
-      <p>
-        I’ve worked on deep reinforcement learning, data engineering pipelines,
-        recommendation systems, and more—always with a focus on practical
-        real-world impact.
-      </p>
-    </section>
-
-    <!-- CV Section -->
-    <section id="cv" class="section">
-      <h2>My CV</h2>
-      <p>
-        You can view or download my detailed CV here:
-        <a href="CV_Louis_Monier__english_with_logos_.pdf" target="_blank" rel="noopener">
-          CV (PDF)
-        </a>
-      </p>
-      <ul>
-        <li><strong>Work Experience:</strong> Head of Data at Spark, AI Researcher (InstaDeep & La Sorbonne), Project
-          Engineer (ENGIE), etc.</li>
-        <li><strong>Education:</strong> Master in AI & Data Science (ENS - Mines Paris - Paris Dauphine), Engineering
-          degree (Mines Paris), BSc+MSc Physics (ENS Lyon)</li>
-        <li><strong>Skills:</strong> Python, PyTorch, TensorFlow, Reinforcement Learning, SQL, AWS/GCP, etc.</li>
-        <li><strong>Interests:</strong> Rugby, CrossFit, cooking, coding side-projects</li>
-      </ul>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="section">
-      <h2>Portfolio</h2>
-      <p>
-        Below are highlights of my data science projects. For a detailed overview, feel free
-        to check out my complete portfolio PDF:
-        <a href="Portfolio_Monier.pdf" target="_blank" rel="noopener">
-          Portfolio (PDF)
-        </a>
-      </p>
-      <div class="projects">
-        <article>
-          <h3>Offline Reinforcement Learning Hands-On</h3>
-          <p>Published at NeurIPS (Offline RL Workshop). Explored deep RL methods in offline settings.
-            <a href="https://arxiv.org/abs/2011.14379">[arXiv]</a>
-          </p>
-        </article>
-
-        <article>
-          <h3>Recommendation System using Contextual Bandits</h3>
-          <p>
-            Built a personalized recommendation system (LinUCB, Hybrid algorithms) using the
-            MovieLens dataset. Applied reinforcement learning to tackle the cold-start problem.
-          </p>
-        </article>
-
-        <article>
-          <h3>Word Embeddings for Machine Translation</h3>
-          <p>
-            Leveraged pre-trained embeddings (fastText, GloVe) and built an unsupervised
-            translator with Generative Adversarial Networks (GAN) to align English/French
-            embedding spaces.
-          </p>
-        </article>
-
-        <article>
-          <h3>Training Robust Neural Networks</h3>
-          <p>
-            Explored adversarial attacks (FGSM, PGD, NES) on CIFAR-10 to demonstrate
-            model weaknesses and robust training methods.
-          </p>
-        </article>
-
-        <article>
-          <h3>Aerial Point Cloud Classification</h3>
-          <p>
-            Implemented a pipeline for 3D city model reconstruction (buildings, ground,
-            vegetation) via deep learning-based point cloud classification.
-          </p>
-        </article>
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <p>
+          I'm a passionate AI/Data Scientist with a strong background in data engineering,
+          deep reinforcement learning, and large-scale systems. From building end-to-end data
+          pipelines to experimenting with new RL algorithms, I focus on delivering solutions
+          that make a tangible impact.
+        </p>
+        <p>
+          I've led data teams, published at top AI conferences, and thrive at the intersection 
+          of research and practical deployment. My approach combines technical excellence with 
+          business acumen to create solutions that drive real value.
+        </p>
       </div>
-    </section>
+      <div class="about-image">
+        <div class="image-wrapper">
+          <img src="photo-louis.jpeg" alt="Louis Monier" />
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Feel free to reach out if you have questions or collaboration ideas:</p>
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience" class="section">
+    <div class="section-title">
+      <h2>Work & Research Experience</h2>
+    </div>
+    
+    <div class="experience-card">
+      <h3>Head of Data at Spark <span class="location"> Paris, FR </span></h3>
+      <span class="date">Feb 2021 – Present</span>
       <ul>
-        <li>Email: <a href="mailto:monier.louis@gmail.com">monier.louis@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/louis-monier/">louis-monier</a></li>
-        <li>GitHub: <a href="https://github.com/louis-monier">louis-monier</a></li>
+        <li>First technical hire, built scalable data infrastructure processing millions of records daily (+40% efficiency).</li>
+        <li>Lead a team of 4 data engineers to drive data-driven decisions and optimize marketing performance.</li>
+        <li>Developed ML-powered analytics tools (computer vision, classification models) improving performance metrics by 25%.</li>
       </ul>
-    </section>
-  </main>
+    </div>
 
-  <!-- Footer -->
+    <div class="experience-card">
+      <h3>AI Research Intern, InstaDeep / La Sorbonne <span class="location"> Paris, FR </span></h3>
+      <span class="date">Apr – Nov 2020</span>
+      <ul>
+        <li>Conducted research on deep reinforcement learning.</li>
+        <li>Published a first-author paper at NeurIPS Offline RL workshop.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h3>Data Scientist Intern, ENGIE Innovation Dept <span class="location"> Paris, FR </span></h3>
+      <span class="date">Oct 2018 – Sep 2019</span>
+      <ul>
+        <li>Performed techno-economic analysis on renewable gas cost reduction, contributing to a technical study.</li>
+        <li>Developed analytical models to assess feasibility of renewable gas plants.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h3>Software Engineer, Akuo Energy Innovation Dept <span class="location"> Dubai, UAE </span></h3>
+      <span class="date">Apr – Sep 2018</span>
+      <ul>
+        <li>Developed software to optimize operation of renewable power plants with battery storage.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h3>Graduate Research Assistant, Harvard University <span class="location"> Boston, USA </span></h3>
+      <span class="date">Apr – Jul 2017</span>
+      <ul>
+        <li>Developed numeric models to simulate Earth's atmospheric dynamics, optimizing large-scale climate simulations.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h3>Graduate Research Assistant, UC San Diego <span class="location"> Californie, USA </span></h3>
+      <span class="date">May – Jul 2016</span>
+      <ul>
+        <li>Engineered experimental setups to investigate bacterial suspensions and fluid viscosity.</li>
+        <li>Developed custom computer vision algorithms for flow-velocity tracking from high-speed video.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h3>Research Intern, Ampère Lab — École Centrale de Lyon <span class="location"> Lyon, FR </span></h3>
+      <span class="date">Jun – Jul 2015</span>
+      <ul>
+        <li>Investigated wireless power transmission via inductive coupling enhanced by metamaterials.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h3>Physics Examiner in Classes Préparatoires <span class="location"> Lyon & Paris </span></h3>
+      <span class="date">2015 – 2020</span>
+      <ul>
+        <li>Weekly examiner (2–3 hours) for intensive scientific programs over 5 years.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EDUCATION SECTION -->
+  <section id="education" class="section">
+    <div class="section-title">
+      <h2>Education</h2>
+    </div>
+
+    <div class="experience-card">
+      <h3>Master in AI & Data Science (IASD, PSL)</h3>
+      <p class="date">2019 – 2020</p>
+      <ul>
+        <li>Joint program by ENS Paris, Mines Paris & Paris Dauphine University</li>
+        <li>Advanced courses in ML, Deep & Reinforcement Learning, Optimization, NLP, Computer Vision, etc.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h3>École des Mines Paris – PSL</h3>
+      <span class="date">2017 – 2019</span>
+      <ul>
+        <li>Engineering degree with training in Applied Mathematics, Computer Science, Economy, Law, Finance, etc.</li>
+      </ul>
+    </div>
+
+    <div class="experience-card">
+      <h3>École Normale Supérieure de Lyon</h3>
+      <span class="date">2014 – 2017</span>
+      <ul>
+        <li>BSc + MSc in Physics; admitted after 2 years of Classes Préparatoires (CPGE).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="section">
+    <div class="section-title">
+      <h2>Technical Skills</h2>
+    </div>
+    
+    <div class="skills-grid">
+      <div class="skill-block">
+        <h3>LLMs & GenAI</h3>
+        <p>GPT models, fine-tuning, prompt engineering, LangChain, Hugging Face, RAG architectures, LLM evaluation</p>
+      </div>
+      <div class="skill-block">
+        <h3>Programming</h3>
+        <p>Python, SQL, Bash, JavaScript</p>
+      </div>
+      <div class="skill-block">
+        <h3>ML Tools</h3>
+        <p>PyTorch (expert), TensorFlow, scikit-learn, OpenAI API, FastAPI, Streamlit</p>
+      </div>
+      <div class="skill-block">
+        <h3>Data Eng</h3>
+        <p>Apache Spark, Hadoop, Airflow, dbt, ETL pipelines</p>
+      </div>
+      <div class="skill-block">
+        <h3>Cloud & DevOps</h3>
+        <p>Docker, Kubernetes, Git, CI/CD, Terraform, GCP, AWS</p>
+      </div>
+      <div class="skill-block">
+        <h3>Databases</h3>
+        <p>PostgreSQL, Snowflake, BigQuery, Redis</p>
+      </div>
+      <div class="skill-block">
+        <h3>Other Tools</h3>
+        <p>GitHub, GitLab, LaTeX, HTML/CSS</p>
+      </div>
+      <div class="skill-block">
+        <h3>Languages</h3>
+        <p>
+          French: Native<br/>
+          English: Fluent (TOEFL 104/120)<br/>
+          Spanish: Basics
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="section">
+    <div class="section-title">
+      <h2>Data Science & ML Projects</h2>
+    </div>
+
+    <p class="section-content">
+      Here are some highlighted projects from my recent work:
+    </p>
+
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <h3>CrossFit Movement Tracking (Pose Estimation + IMU Fusion)</h3>
+        <p>
+          Collaboration with <a href="https://competitioncorner.net/">Competition Corner</a>. 
+          Developed a hybrid system integrating CNN/Transformer-based pose estimation and sensor 
+          data for precise movement tracking, significantly improving real-time classification accuracy.
+        </p>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <h3>Recommendation System with Contextual Bandits (RL)</h3>
+        <p>
+          Reinforcement-learning-based recommendation (Linear Bandits, UCB, Thompson Sampling), 
+          improving content personalization by 15% in engagement metrics.
+        </p>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <h3>Machine Translation (GAN + NLP)</h3>
+        <p>
+          Built a GAN-based neural machine translation system aligning source/target embedding spaces.
+        </p>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <h3>Robust Neural Networks (Adversarial Training)</h3>
+        <p>
+          Explored adversarial attacks (FGSM, PGD) and defenses in deep learning to enhance model robustness.
+        </p>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-card">
+        <h3>3D Point Cloud Classification</h3>
+        <p>
+          Deployed CNNs and PointNet variants for LiDAR data classification and 3D segmentation.
+        </p>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project-card">
+        <h3>Large Graph Connected Components</h3>
+        <p>
+          Implemented MapReduce-based distributed algorithms for large-scale graph connectivity problems.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS SECTION -->
+  <section id="publications" class="section">
+    <div class="section-title">
+      <h2>Publications</h2>
+    </div>
+    
+    <div class="publication-card">
+      <h3>Offline Reinforcement Learning Hands-On (NeurIPS Workshop, 2020)</h3>
+      <p>
+        <strong>Authors:</strong> L. Monier, J. Kmec, A. Laterre, T. Pierrot, V. Courgeau, O. Sigaud, K. Beguir<br/>
+        <strong>Summary:</strong> First-author publication on practical implementation of offline RL algorithms (DQN, PPO, SAC).<br/>
+        <a href="https://arxiv.org/abs/2011.14379" target="_blank" rel="noopener">arXiv</a> | 
+        <a href="https://arxiv.org/pdf/2011.14379.pdf" target="_blank" rel="noopener">PDF</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- INTERESTS SECTION -->
+  <section id="interests" class="section">
+    <div class="section-title">
+      <h2>Interests</h2>
+    </div>
+    <ul class="section-content">
+      <li><strong>Competitive CrossFit</strong> – active competitor; fosters discipline, teamwork, and resilience.</li>
+      <li><strong>Rugby</strong> – Former high-level rugby player, served as team captain (French Rugby Federation <em>pôle espoir</em>).</li>
+      <li>Also enjoy traveling, cooking, and reading about cutting-edge ML research.</li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Louis Monier. All rights reserved.</p>
+    <p class="footer-text">
+      © 2025 Louis Monier • Built with ♥, Cursor, and a lot of LaTeX & Code
+    </p>
   </footer>
 
+  <!-- Add this before closing body tag -->
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+    
+    // Section animations
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+    
+    const observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    
+    document.querySelectorAll('.section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
-
 </html>
